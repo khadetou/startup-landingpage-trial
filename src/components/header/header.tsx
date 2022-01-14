@@ -29,6 +29,9 @@ const Header: FC<HeaderProps> = ({ className }) => {
                         ))
                     }
                 </nav>
+                <button
+                    className="box-border m-0 min-w-0 inline-block text-center px-[15px] py-[10px] text-secondary rounded-full font-body font-medium transition-all duration-[0.25s] border-2 border-secondary background-transparent hover:bg-secondary hover:text-white focus:outline-none lg:mx-0 xs:mr-5 md:text-base sm:py-[15px] sm:px-[30px]"
+                    aria-label="Get Started">Get Started</button>
             </div>
         </header>
     )
