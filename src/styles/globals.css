@@ -5,7 +5,10 @@
     @apply font-normal text-xl px-6 leading-4 transition-all duration-[0.15s] cursor-pointer;
 
     &:hover {
-      @apply text-white;
+      @apply text-secondary;
+    }
+    &.active {
+      @apply text-secondary;
     }
   }
 }
