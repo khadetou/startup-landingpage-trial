@@ -1,4 +1,4 @@
-export const navigationLinks = [
+export const menueItems = [
   {
     path: "home",
     label: "Home",
