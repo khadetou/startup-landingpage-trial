@@ -21,7 +21,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
-                <Header className={isSticky ? "sticky" : "unSticky"} />
+                <Header className={isSticky ? "sticky bg-white" : "unSticky bg-transparent"} />
             </Sticky>
             <main id="content">
                 {children}

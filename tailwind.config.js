@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -16,6 +17,7 @@ module.exports = {
         primary: "#343D48",
         secondary: "#EA3A60",
         tertiary: "#2563FF",
+        heading: "#0F2137",
       },
       fontFamily: {
         body: ["DM Sans", "sans-serif"],
