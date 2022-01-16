@@ -2,7 +2,7 @@
 
 .nav {
   a {
-    @apply font-normal text-[1rem] px-6 leading-[1.2] transition-all duration-[0.15s] cursor-pointer;
+    @apply font-medium text-[1rem] px-6 leading-[1.2] transition-all duration-[0.15s] cursor-pointer;
 
     &:hover {
       @apply text-secondary;
