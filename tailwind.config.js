@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         primary: "#343D48",
         secondary: "#EA3A60",
+        tertiary: "#2563FF",
       },
       fontFamily: {
         body: ["DM Sans", "sans-serif"],

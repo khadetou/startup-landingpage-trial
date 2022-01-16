@@ -7,9 +7,9 @@ import { IPlacement } from "rc-drawer/lib/IDrawerPropTypes";
 interface DrawerProps {
     className?: string;
     children?: any;
-    closeButton: boolean;
+    closeButton: any;
     closeButtonStyle?: string;
-    drawerHandler: () => void;
+    drawerHandler: any;
     toggleHandler: () => void;
     open: boolean;
     width: string;
@@ -33,6 +33,7 @@ const Drawer: FC<DrawerProps> = ({
     closeBtnStyle,
     ...props
 }) => {
+
     return (
         <Fragment>
             <RcDrawer

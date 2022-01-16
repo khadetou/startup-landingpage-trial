@@ -13,6 +13,15 @@
   }
 }
 
+.menu {
+  a {
+    @apply text-base font-medium text-primary py-[15px] cursor-pointer border-b-[1px] border-solid border-[#e8e5e5] transition-all duration-[0.25s] hover:text-tertiary;
+    &.active {
+      @apply text-tertiary;
+    }
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
