@@ -17,6 +17,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         }
     }
 
+    console.log(isSticky);
 
     return (
         <>
