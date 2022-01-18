@@ -34,9 +34,22 @@ module.exports = {
             transition: "all 0.4s ease-in",
           },
         },
+        pulsePlay: {
+          from: {
+            transform:
+              "translateX(-50%) translateY(-50%) translateZ(0) scale(1)",
+            opacity: 1,
+          },
+          to: {
+            transform:
+              "translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)",
+            opacity: 0,
+          },
+        },
       },
       animation: {
         positionAnim: "positionAnim 0.4s ease-in",
+        pulsePlay: "pulsePlay 1.5s ease-out infinite",
       },
     },
     plugins: [],
