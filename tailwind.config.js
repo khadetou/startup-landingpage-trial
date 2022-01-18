@@ -8,8 +8,6 @@ module.exports = {
   theme: {
     screens: {
       xs: "480px",
-      reg: "1220px",
-      "3xl": "1620px",
       ...defaultTheme.screens,
     },
     extend: {
@@ -18,6 +16,11 @@ module.exports = {
         secondary: "#EA3A60",
         tertiary: "#2563FF",
         heading: "#0F2137",
+        tsecondary: "#02073E",
+      },
+      screens: {
+        reg: "1220px",
+        "3xl": "1620px",
       },
       fontFamily: {
         body: ["DM Sans", "sans-serif"],
