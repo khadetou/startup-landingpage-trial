@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import ServiceThumb from '/public/assets/service-thumb.png';
 import shapePattern from '/public/assets/shape-pattern1.png';
 import Image from 'next/image';
@@ -6,7 +6,7 @@ import Smart from "/public/assets/services/smart.svg";
 import Secure from '/public/assets/services/secure.svg';
 import { IoIosPlay } from 'react-icons/io';
 import TextFeature from 'components/text-feature';
-
+import ReactPlayer from 'react-player';
 
 
 const data = {
@@ -29,11 +29,27 @@ const data = {
         },
     ],
 };
+interface ServiceSectionProps {
+    isOpen: boolean;
+    setIsOpen: (isOpen: boolean) => void;
+}
+const ServiceSection: FC<ServiceSectionProps> = ({ isOpen, setIsOpen }) => {
 
-const ServiceSection: FC = () => {
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [isOpen]);
+
+    let hidden: string = "";
+    let display: string = "";
+
     return (
         <section
-            className="pb-[90px] sm:pb-[45px] reg:pb-[120px] 3xl:pb-[190px] "
+            className="pb-[90px] sm:pb-[45px] reg:pb-[120px] 3xl:pb-[190px] relative"
         >
             <div className="xs:px-[30px] md:max-w-[780px] lg:max-w-[1020px] reg:max-w-[1200px] flex justify-between box-border m-0 min-w-0 w-full mx-auto max-w-full px-5">
                 <div
@@ -41,6 +57,7 @@ const ServiceSection: FC = () => {
                 >
                     <Image src={ServiceThumb} alt="Thumbnail" />
                     <button
+                        onClick={() => setIsOpen(true)}
                         className="z-10 absolute left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 w-[60px] sm:w-20 lg:w-[100px] h-[60px] sm:h-20 lg:h-[100px] p-0 bg-transparent before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:block before:w-[60px] before:sm:w-[80px] before:lg:w-[100px]  before:h-[60px] before:sm:h-[80px] before:lg:h-[100px] before:bg-secondary before:rounded-full before:animate-pulsePlay before:opacity-50"
                     >
                         <span
@@ -54,6 +71,7 @@ const ServiceSection: FC = () => {
                     >
                         <Image src={shapePattern} alt="shape" />
                     </div>
+
                 </div>
 
                 <div
@@ -88,6 +106,19 @@ const ServiceSection: FC = () => {
                     </div>
                 </div>
             </div>
+
+            <div className={isOpen ? "fixed h-[93%] w-[76%] left-1/2 top-1/2  -translate-x-2/4 -translate-y-1/2 z-[5000]  opacity-100  transition-all ease-in-out duration-1000" : " fixed translate-y-[0%] left-1/2 -translate-x-1/2 z-[5000] opacity-0 transition-all ease-in-out duration-1000 "}>
+                <ReactPlayer
+                    width="100%"
+                    height="100%"
+                    playing={isOpen}
+                    controls
+                    className={"absolute top-0 left-0 border-8 border-white z-[5000] opacity-100 rounded-xl transition-all"}
+                    url={'https://youtu.be/2IOl1htRC5A'}
+                />
+
+            </div>
+
         </section>
     )
 }

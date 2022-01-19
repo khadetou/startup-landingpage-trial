@@ -4,15 +4,16 @@ import type { NextPage } from 'next'
 import Banner from 'sections/Banner'
 import KeyFeatures from 'sections/key-features'
 import ServiceSection from 'sections/service-section'
-
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <Layout>
+    <Layout isOpen={isOpen} setIsOpen={setIsOpen}>
       <SEO title="NextJs Landing Page" />
       <Banner />
       <KeyFeatures />
-      <ServiceSection />
+      <ServiceSection isOpen={isOpen} setIsOpen={setIsOpen} />
     </Layout>
   )
 }
