@@ -49,7 +49,7 @@ const Feature: FC = () => {
                     title="Amazing useful features"
                 />
                 <div
-                    className="grid gap-x-0 gap-y-10 grid-cols-1 px-[25px] xs:px-[30px] sm:px-0 sm:gap-y-[45px] sm:gap-x-[30px] lg:px-[50px] lg:gap-y-[60px] lg:gap-x-[50px] reg:px-[80px] reg:gap-y-[70px] reg:gap-x-[80px] xl:px-[50px] xl:pt-[10px] 3xl:gap-y-[80px] 3xl:gap-x-[90px]"
+                    className="grid gap-x-0 gap-y-10 grid-cols-1 px-[25px] xs:px-[30px] sm:px-0 sm:gap-y-[45px] sm:gap-x-[30px] sm:grid-cols-2 lg:px-[50px] lg:gap-y-[60px] lg:gap-x-[50px] reg:px-[80px] reg:gap-y-[70px] reg:gap-x-[80px] xl:px-[50px] xl:pt-[10px] 3xl:gap-y-[80px] 3xl:gap-x-[90px]"
                 >
                     {
                         data.map((item) => (

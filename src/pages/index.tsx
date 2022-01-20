@@ -5,6 +5,7 @@ import Banner from 'sections/Banner'
 import KeyFeatures from 'sections/key-features'
 import ServiceSection from 'sections/service-section'
 import { useState } from 'react';
+import Feature from 'sections/feature'
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Banner />
       <KeyFeatures />
       <ServiceSection isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Feature />
     </Layout>
   )
 }
